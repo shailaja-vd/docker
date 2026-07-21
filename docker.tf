@@ -43,3 +43,6 @@ resource "aws_security_group" "allow_tls" {
     Name = "allow_tls"
   }
 }
+output "docker_ip" {
+ value = aws_instance.this.public_ip
+}
