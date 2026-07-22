@@ -3,7 +3,7 @@ resource "aws_instance" "this" {
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   instance_type          = "t3.micro"
 
-  # 20GB s not enough
+  # 20GB is not enough
   root_block_device {
     volume_size = 50 # set root volume size to 50GB
     volume_type = "gp3" # Use gp3 for better performance (optional)
